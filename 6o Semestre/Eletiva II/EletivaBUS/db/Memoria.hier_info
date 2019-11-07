@@ -1,0 +1,648 @@
+|mem_4x16
+OUT_0 <= out[0].DB_MAX_OUTPUT_PORT_TYPE
+Mem_Read => bitBuffer:inst8.Mem_read
+Mem_Read => inst4.IN0
+Sel_0 => bitBuffer:inst8.Sel[0]
+Sel_0 => 74139M:inst11.A
+Sel_0 => 74139M:inst12.A
+Sel_1 => bitBuffer:inst8.Sel[1]
+Sel_1 => 74139M:inst11.B
+Sel_1 => 74139M:inst12.B
+Mem_write => inst5.IN0
+bit_0 => Memoria:inst.DATA[0]
+bit_0 => Memoria:inst3.DATA[0]
+bit_0 => Memoria:inst6.DATA[0]
+bit_0 => Memoria:inst7.DATA[0]
+bit_0 => bit_led_0.DATAIN
+bit_1 => Memoria:inst.DATA[1]
+bit_1 => Memoria:inst3.DATA[1]
+bit_1 => Memoria:inst6.DATA[1]
+bit_1 => Memoria:inst7.DATA[1]
+bit_1 => bit_led_1.DATAIN
+bit_2 => Memoria:inst.DATA[2]
+bit_2 => Memoria:inst3.DATA[2]
+bit_2 => Memoria:inst6.DATA[2]
+bit_2 => Memoria:inst7.DATA[2]
+bit_2 => bit_led_2.DATAIN
+bit_3 => Memoria:inst.DATA[3]
+bit_3 => Memoria:inst3.DATA[3]
+bit_3 => Memoria:inst6.DATA[3]
+bit_3 => Memoria:inst7.DATA[3]
+bit_3 => bit_led_3.DATAIN
+Sel_2 => Memoria:inst.Sel[0]
+Sel_2 => Memoria:inst3.Sel[0]
+Sel_2 => Memoria:inst6.Sel[0]
+Sel_2 => Memoria:inst7.Sel[0]
+Sel_3 => Memoria:inst.Sel[1]
+Sel_3 => Memoria:inst3.Sel[1]
+Sel_3 => Memoria:inst6.Sel[1]
+Sel_3 => Memoria:inst7.Sel[1]
+OUT_1 <= out[1].DB_MAX_OUTPUT_PORT_TYPE
+OUT_2 <= out[2].DB_MAX_OUTPUT_PORT_TYPE
+OUT_3 <= out[3].DB_MAX_OUTPUT_PORT_TYPE
+bit_led_0 <= bit_0.DB_MAX_OUTPUT_PORT_TYPE
+bit_led_1 <= bit_1.DB_MAX_OUTPUT_PORT_TYPE
+bit_led_2 <= bit_2.DB_MAX_OUTPUT_PORT_TYPE
+bit_led_3 <= bit_3.DB_MAX_OUTPUT_PORT_TYPE
+probe[0] <= Memoria:inst.OUTPUT[0]
+probe[1] <= Memoria:inst.OUTPUT[1]
+probe[2] <= Memoria:inst.OUTPUT[2]
+probe[3] <= Memoria:inst.OUTPUT[3]
+
+
+|mem_4x16|bitBuffer:inst8
+OUTPUT[0] <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+WORD1[0] => inst.IN0
+WORD1[1] => inst5.IN0
+WORD1[2] => inst6.IN0
+WORD1[3] => inst7.IN0
+Sel[0] => 74139M:inst17.A
+Sel[1] => 74139M:inst17.B
+Mem_read => inst1.IN0
+WORD3[0] => inst3.IN0
+WORD3[1] => inst11.IN0
+WORD3[2] => inst12.IN0
+WORD3[3] => inst13.IN0
+WORD4[0] => inst4.IN0
+WORD4[1] => inst14.IN0
+WORD4[2] => inst15.IN0
+WORD4[3] => inst16.IN0
+WORD2[0] => inst2.IN0
+WORD2[1] => inst8.IN0
+WORD2[2] => inst9.IN0
+WORD2[3] => inst10.IN0
+
+
+|mem_4x16|bitBuffer:inst8|74139M:inst17
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|Memoria:inst
+OUTPUT[0] <= bitBuffer:inst6.OUTPUT[0]
+OUTPUT[1] <= bitBuffer:inst6.OUTPUT[1]
+OUTPUT[2] <= bitBuffer:inst6.OUTPUT[2]
+OUTPUT[3] <= bitBuffer:inst6.OUTPUT[3]
+Mem_read => bitBuffer:inst6.Mem_read
+sel1 => bitBuffer:inst6.Sel[1]
+sel1 => 74139M:inst11.B
+sel0 => bitBuffer:inst6.Sel[0]
+sel0 => 74139M:inst11.A
+Mem_Write => inst16.IN0
+DATA[0] => Reg4bits:inst.DATA[0]
+DATA[0] => Reg4bits:inst1.DATA[0]
+DATA[0] => Reg4bits:inst2.DATA[0]
+DATA[0] => Reg4bits:inst3.DATA[0]
+DATA[1] => Reg4bits:inst.DATA[1]
+DATA[1] => Reg4bits:inst1.DATA[1]
+DATA[1] => Reg4bits:inst2.DATA[1]
+DATA[1] => Reg4bits:inst3.DATA[1]
+DATA[2] => Reg4bits:inst.DATA[2]
+DATA[2] => Reg4bits:inst1.DATA[2]
+DATA[2] => Reg4bits:inst2.DATA[2]
+DATA[2] => Reg4bits:inst3.DATA[2]
+DATA[3] => Reg4bits:inst.DATA[3]
+DATA[3] => Reg4bits:inst1.DATA[3]
+DATA[3] => Reg4bits:inst2.DATA[3]
+DATA[3] => Reg4bits:inst3.DATA[3]
+
+
+|mem_4x16|Memoria:inst|bitBuffer:inst6
+OUTPUT[0] <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+WORD1[0] => inst.IN0
+WORD1[1] => inst5.IN0
+WORD1[2] => inst6.IN0
+WORD1[3] => inst7.IN0
+Sel[0] => 74139M:inst17.A
+Sel[1] => 74139M:inst17.B
+Mem_read => inst1.IN0
+WORD3[0] => inst3.IN0
+WORD3[1] => inst11.IN0
+WORD3[2] => inst12.IN0
+WORD3[3] => inst13.IN0
+WORD4[0] => inst4.IN0
+WORD4[1] => inst14.IN0
+WORD4[2] => inst15.IN0
+WORD4[3] => inst16.IN0
+WORD2[0] => inst2.IN0
+WORD2[1] => inst8.IN0
+WORD2[2] => inst9.IN0
+WORD2[3] => inst10.IN0
+
+
+|mem_4x16|Memoria:inst|bitBuffer:inst6|74139M:inst17
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|Memoria:inst|Reg4bits:inst
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst|74139M:inst11
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|Memoria:inst|Reg4bits:inst1
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst|Reg4bits:inst2
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst|Reg4bits:inst3
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|74139M:inst11
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|74139M:inst12
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|Memoria:inst3
+OUTPUT[0] <= bitBuffer:inst6.OUTPUT[0]
+OUTPUT[1] <= bitBuffer:inst6.OUTPUT[1]
+OUTPUT[2] <= bitBuffer:inst6.OUTPUT[2]
+OUTPUT[3] <= bitBuffer:inst6.OUTPUT[3]
+Mem_read => bitBuffer:inst6.Mem_read
+sel1 => bitBuffer:inst6.Sel[1]
+sel1 => 74139M:inst11.B
+sel0 => bitBuffer:inst6.Sel[0]
+sel0 => 74139M:inst11.A
+Mem_Write => inst16.IN0
+DATA[0] => Reg4bits:inst.DATA[0]
+DATA[0] => Reg4bits:inst1.DATA[0]
+DATA[0] => Reg4bits:inst2.DATA[0]
+DATA[0] => Reg4bits:inst3.DATA[0]
+DATA[1] => Reg4bits:inst.DATA[1]
+DATA[1] => Reg4bits:inst1.DATA[1]
+DATA[1] => Reg4bits:inst2.DATA[1]
+DATA[1] => Reg4bits:inst3.DATA[1]
+DATA[2] => Reg4bits:inst.DATA[2]
+DATA[2] => Reg4bits:inst1.DATA[2]
+DATA[2] => Reg4bits:inst2.DATA[2]
+DATA[2] => Reg4bits:inst3.DATA[2]
+DATA[3] => Reg4bits:inst.DATA[3]
+DATA[3] => Reg4bits:inst1.DATA[3]
+DATA[3] => Reg4bits:inst2.DATA[3]
+DATA[3] => Reg4bits:inst3.DATA[3]
+
+
+|mem_4x16|Memoria:inst3|bitBuffer:inst6
+OUTPUT[0] <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+WORD1[0] => inst.IN0
+WORD1[1] => inst5.IN0
+WORD1[2] => inst6.IN0
+WORD1[3] => inst7.IN0
+Sel[0] => 74139M:inst17.A
+Sel[1] => 74139M:inst17.B
+Mem_read => inst1.IN0
+WORD3[0] => inst3.IN0
+WORD3[1] => inst11.IN0
+WORD3[2] => inst12.IN0
+WORD3[3] => inst13.IN0
+WORD4[0] => inst4.IN0
+WORD4[1] => inst14.IN0
+WORD4[2] => inst15.IN0
+WORD4[3] => inst16.IN0
+WORD2[0] => inst2.IN0
+WORD2[1] => inst8.IN0
+WORD2[2] => inst9.IN0
+WORD2[3] => inst10.IN0
+
+
+|mem_4x16|Memoria:inst3|bitBuffer:inst6|74139M:inst17
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|Memoria:inst3|Reg4bits:inst
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst3|74139M:inst11
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|Memoria:inst3|Reg4bits:inst1
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst3|Reg4bits:inst2
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst3|Reg4bits:inst3
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst6
+OUTPUT[0] <= bitBuffer:inst6.OUTPUT[0]
+OUTPUT[1] <= bitBuffer:inst6.OUTPUT[1]
+OUTPUT[2] <= bitBuffer:inst6.OUTPUT[2]
+OUTPUT[3] <= bitBuffer:inst6.OUTPUT[3]
+Mem_read => bitBuffer:inst6.Mem_read
+sel1 => bitBuffer:inst6.Sel[1]
+sel1 => 74139M:inst11.B
+sel0 => bitBuffer:inst6.Sel[0]
+sel0 => 74139M:inst11.A
+Mem_Write => inst16.IN0
+DATA[0] => Reg4bits:inst.DATA[0]
+DATA[0] => Reg4bits:inst1.DATA[0]
+DATA[0] => Reg4bits:inst2.DATA[0]
+DATA[0] => Reg4bits:inst3.DATA[0]
+DATA[1] => Reg4bits:inst.DATA[1]
+DATA[1] => Reg4bits:inst1.DATA[1]
+DATA[1] => Reg4bits:inst2.DATA[1]
+DATA[1] => Reg4bits:inst3.DATA[1]
+DATA[2] => Reg4bits:inst.DATA[2]
+DATA[2] => Reg4bits:inst1.DATA[2]
+DATA[2] => Reg4bits:inst2.DATA[2]
+DATA[2] => Reg4bits:inst3.DATA[2]
+DATA[3] => Reg4bits:inst.DATA[3]
+DATA[3] => Reg4bits:inst1.DATA[3]
+DATA[3] => Reg4bits:inst2.DATA[3]
+DATA[3] => Reg4bits:inst3.DATA[3]
+
+
+|mem_4x16|Memoria:inst6|bitBuffer:inst6
+OUTPUT[0] <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+WORD1[0] => inst.IN0
+WORD1[1] => inst5.IN0
+WORD1[2] => inst6.IN0
+WORD1[3] => inst7.IN0
+Sel[0] => 74139M:inst17.A
+Sel[1] => 74139M:inst17.B
+Mem_read => inst1.IN0
+WORD3[0] => inst3.IN0
+WORD3[1] => inst11.IN0
+WORD3[2] => inst12.IN0
+WORD3[3] => inst13.IN0
+WORD4[0] => inst4.IN0
+WORD4[1] => inst14.IN0
+WORD4[2] => inst15.IN0
+WORD4[3] => inst16.IN0
+WORD2[0] => inst2.IN0
+WORD2[1] => inst8.IN0
+WORD2[2] => inst9.IN0
+WORD2[3] => inst10.IN0
+
+
+|mem_4x16|Memoria:inst6|bitBuffer:inst6|74139M:inst17
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|Memoria:inst6|Reg4bits:inst
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst6|74139M:inst11
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|Memoria:inst6|Reg4bits:inst1
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst6|Reg4bits:inst2
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst6|Reg4bits:inst3
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst7
+OUTPUT[0] <= bitBuffer:inst6.OUTPUT[0]
+OUTPUT[1] <= bitBuffer:inst6.OUTPUT[1]
+OUTPUT[2] <= bitBuffer:inst6.OUTPUT[2]
+OUTPUT[3] <= bitBuffer:inst6.OUTPUT[3]
+Mem_read => bitBuffer:inst6.Mem_read
+sel1 => bitBuffer:inst6.Sel[1]
+sel1 => 74139M:inst11.B
+sel0 => bitBuffer:inst6.Sel[0]
+sel0 => 74139M:inst11.A
+Mem_Write => inst16.IN0
+DATA[0] => Reg4bits:inst.DATA[0]
+DATA[0] => Reg4bits:inst1.DATA[0]
+DATA[0] => Reg4bits:inst2.DATA[0]
+DATA[0] => Reg4bits:inst3.DATA[0]
+DATA[1] => Reg4bits:inst.DATA[1]
+DATA[1] => Reg4bits:inst1.DATA[1]
+DATA[1] => Reg4bits:inst2.DATA[1]
+DATA[1] => Reg4bits:inst3.DATA[1]
+DATA[2] => Reg4bits:inst.DATA[2]
+DATA[2] => Reg4bits:inst1.DATA[2]
+DATA[2] => Reg4bits:inst2.DATA[2]
+DATA[2] => Reg4bits:inst3.DATA[2]
+DATA[3] => Reg4bits:inst.DATA[3]
+DATA[3] => Reg4bits:inst1.DATA[3]
+DATA[3] => Reg4bits:inst2.DATA[3]
+DATA[3] => Reg4bits:inst3.DATA[3]
+
+
+|mem_4x16|Memoria:inst7|bitBuffer:inst6
+OUTPUT[0] <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+WORD1[0] => inst.IN0
+WORD1[1] => inst5.IN0
+WORD1[2] => inst6.IN0
+WORD1[3] => inst7.IN0
+Sel[0] => 74139M:inst17.A
+Sel[1] => 74139M:inst17.B
+Mem_read => inst1.IN0
+WORD3[0] => inst3.IN0
+WORD3[1] => inst11.IN0
+WORD3[2] => inst12.IN0
+WORD3[3] => inst13.IN0
+WORD4[0] => inst4.IN0
+WORD4[1] => inst14.IN0
+WORD4[2] => inst15.IN0
+WORD4[3] => inst16.IN0
+WORD2[0] => inst2.IN0
+WORD2[1] => inst8.IN0
+WORD2[2] => inst9.IN0
+WORD2[3] => inst10.IN0
+
+
+|mem_4x16|Memoria:inst7|bitBuffer:inst6|74139M:inst17
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|Memoria:inst7|Reg4bits:inst
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst7|74139M:inst11
+Y3N <= 36.DB_MAX_OUTPUT_PORT_TYPE
+B => 11.IN0
+A => 8.IN0
+G => 7.IN0
+Y0N <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 34.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mem_4x16|Memoria:inst7|Reg4bits:inst1
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst7|Reg4bits:inst2
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+
+|mem_4x16|Memoria:inst7|Reg4bits:inst3
+OUTPU[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPU[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst.CLK
+CLOCK => inst1.CLK
+CLOCK => inst2.CLK
+CLOCK => inst3.CLK
+DATA[0] => inst.DATAIN
+DATA[1] => inst1.DATAIN
+DATA[2] => inst2.DATAIN
+DATA[3] => inst3.DATAIN
+
+

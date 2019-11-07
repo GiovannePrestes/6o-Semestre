@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="bit_0" source="Pin Planner" >
+		</pin>
+		<pin name="bit_1" source="Pin Planner" >
+		</pin>
+		<pin name="bit_3" source="Pin Planner" >
+		</pin>
+		<pin name="bit_led_1" source="Pin Planner" >
+		</pin>
+		<pin name="bit_2" source="Pin Planner" >
+		</pin>
+		<pin name="Sel_2" source="Pin Planner" >
+		</pin>
+		<pin name="Sel_3" source="Pin Planner" >
+		</pin>
+		<pin name="OUT_0" source="Pin Planner" >
+		</pin>
+		<pin name="Mem_write" source="Pin Planner" >
+		</pin>
+		<pin name="OUT_1" source="Pin Planner" >
+		</pin>
+		<pin name="OUT_2" source="Pin Planner" >
+		</pin>
+		<pin name="OUT_3" source="Pin Planner" >
+		</pin>
+		<pin name="bit_led_0" source="Pin Planner" >
+		</pin>
+		<pin name="bit_led_2" source="Pin Planner" >
+		</pin>
+		<pin name="bit_led_3" source="Pin Planner" >
+		</pin>
+		<pin name="Mem_Read" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

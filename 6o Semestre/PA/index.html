@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro de Passageiros</title>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+            crossorigin="anonymous">
+        </script>
+        <script src="..\main.js"></script>
+        <!-- <script ></script> -->
+    </head>
+    <body>
+        <form action="cadastro.js" method="post">
+            Nome
+            <input type="text" name="nome" id="nome">
+            <br>Sobrenome
+            <input type="text" name="sobrenome" id="sobrenome">
+            <br>Sexo:<br>
+            Male
+            <input type="radio" name="sexo" value="male">
+            Female
+            <input type="radio" name="sexo" value="female">
+            <br>
+            Quantidade de acompanhantes
+            <input type="number" name="numAcompanhantes">
+            <br>Classe:<br>
+            Econômica
+            <input type="radio" name="classe" value="economica">
+            Primeira Classe
+            <input type="radio" name="classe" value="primeiraClasse">
+            Executiva
+            <input type="radio" name="classe" value="executiva">
+            <br>Acessos: <br>
+            Wifi
+            <input type="checkbox" name="acesso" value="wifi">
+            Servico de quarto
+            <input type="checkbox" name="acesso" value="servicoQuarto">
+            Ar-condicionado
+            <input type="checkbox" name="acesso" value="arCondicionado">
+            <br>
+            <input type="button" onclick="funcao()">
+        </form>
+    </body>
+</html>

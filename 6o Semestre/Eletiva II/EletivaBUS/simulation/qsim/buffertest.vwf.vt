@@ -1,0 +1,163 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/24/2019 18:34:23"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          bitBuffer
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module bitBuffer_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg Mem_read;
+reg [1:0] Sel;
+reg [3:0] WORD1;
+reg [3:0] WORD2;
+reg [3:0] WORD3;
+reg [3:0] WORD4;
+// wires                                               
+wire [3:0] OUTPUT;
+
+// assign statements (if any)                          
+bitBuffer i1 (
+// port map - connection between master ports and signals/registers   
+	.Mem_read(Mem_read),
+	.\OUTPUT (OUTPUT),
+	.Sel(Sel),
+	.WORD1(WORD1),
+	.WORD2(WORD2),
+	.WORD3(WORD3),
+	.WORD4(WORD4)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// Mem_read
+initial
+begin
+	Mem_read = 1'b0;
+	Mem_read = #50000 1'b1;
+	Mem_read = #20000 1'b0;
+end 
+// Sel[ 1 ]
+initial
+begin
+	Sel[1] = 1'b0;
+end 
+// Sel[ 0 ]
+initial
+begin
+	Sel[0] = 1'b0;
+end 
+// WORD1[ 3 ]
+initial
+begin
+	WORD1[3] = 1'b0;
+	WORD1[3] = #50000 1'b1;
+	WORD1[3] = #10000 1'b0;
+end 
+// WORD1[ 2 ]
+initial
+begin
+	WORD1[2] = 1'b0;
+	WORD1[2] = #50000 1'b1;
+	WORD1[2] = #10000 1'b0;
+end 
+// WORD1[ 1 ]
+initial
+begin
+	WORD1[1] = 1'b0;
+	WORD1[1] = #50000 1'b1;
+	WORD1[1] = #10000 1'b0;
+end 
+// WORD1[ 0 ]
+initial
+begin
+	WORD1[0] = 1'b0;
+	WORD1[0] = #50000 1'b1;
+	WORD1[0] = #10000 1'b0;
+end 
+// WORD2[ 3 ]
+initial
+begin
+	WORD2[3] = 1'b0;
+end 
+// WORD2[ 2 ]
+initial
+begin
+	WORD2[2] = 1'b0;
+end 
+// WORD2[ 1 ]
+initial
+begin
+	WORD2[1] = 1'b0;
+end 
+// WORD2[ 0 ]
+initial
+begin
+	WORD2[0] = 1'b0;
+end 
+// WORD3[ 3 ]
+initial
+begin
+	WORD3[3] = 1'b0;
+end 
+// WORD3[ 2 ]
+initial
+begin
+	WORD3[2] = 1'b0;
+end 
+// WORD3[ 1 ]
+initial
+begin
+	WORD3[1] = 1'b0;
+end 
+// WORD3[ 0 ]
+initial
+begin
+	WORD3[0] = 1'b0;
+end 
+// WORD4[ 3 ]
+initial
+begin
+	WORD4[3] = 1'b0;
+end 
+// WORD4[ 2 ]
+initial
+begin
+	WORD4[2] = 1'b0;
+end 
+// WORD4[ 1 ]
+initial
+begin
+	WORD4[1] = 1'b0;
+end 
+// WORD4[ 0 ]
+initial
+begin
+	WORD4[0] = 1'b0;
+end 
+endmodule
+

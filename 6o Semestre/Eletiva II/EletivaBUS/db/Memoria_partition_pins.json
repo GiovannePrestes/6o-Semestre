@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "OUT_0",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_1",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_2",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_3",
+					"strict" : false
+				},
+				{
+					"name" : "bit_led_0",
+					"strict" : false
+				},
+				{
+					"name" : "bit_led_1",
+					"strict" : false
+				},
+				{
+					"name" : "bit_led_2",
+					"strict" : false
+				},
+				{
+					"name" : "bit_led_3",
+					"strict" : false
+				},
+				{
+					"name" : "probe[3]",
+					"strict" : false
+				},
+				{
+					"name" : "probe[2]",
+					"strict" : false
+				},
+				{
+					"name" : "probe[1]",
+					"strict" : false
+				},
+				{
+					"name" : "probe[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_2",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_1",
+					"strict" : false
+				},
+				{
+					"name" : "Mem_Read",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_0",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_3",
+					"strict" : false
+				},
+				{
+					"name" : "bit_0",
+					"strict" : false
+				},
+				{
+					"name" : "bit_1",
+					"strict" : false
+				},
+				{
+					"name" : "bit_2",
+					"strict" : false
+				},
+				{
+					"name" : "bit_3",
+					"strict" : false
+				},
+				{
+					"name" : "Mem_write",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

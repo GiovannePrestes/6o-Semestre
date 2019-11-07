@@ -1,0 +1,21 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Mem_write'
+Slack : -0.724
+TNS   : -54.087
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Mem_write'
+Slack : -0.724
+TNS   : -54.624
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Mem_write'
+Slack : -0.389
+TNS   : -15.215
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Mem_write'
+Slack : -0.386
+TNS   : -15.353
+
+------------------------------------------------------------
