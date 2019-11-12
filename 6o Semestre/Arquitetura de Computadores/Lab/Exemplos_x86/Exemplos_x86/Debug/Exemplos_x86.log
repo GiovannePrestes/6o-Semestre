@@ -1,3 +1,3 @@
 ﻿  Exemplos_x86.cpp
-d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(158): warning C4717: 'Relogio': recursive on all control paths, function will cause runtime stack overflow
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(166): warning C4717: 'Relogio': recursive on all control paths, function will cause runtime stack overflow
   Exemplos_x86.vcxproj -> D:\Facul\6o Semestre\Arquitetura de Computadores\Lab\Exemplos_x86\Debug\Exemplos_x86.exe

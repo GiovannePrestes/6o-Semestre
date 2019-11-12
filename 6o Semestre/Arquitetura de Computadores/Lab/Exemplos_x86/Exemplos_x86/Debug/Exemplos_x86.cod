@@ -75,6 +75,10 @@ PUBLIC	?Facens@@YAXXZ					; Facens
 PUBLIC	?Maior@@YAXXZ					; Maior
 PUBLIC	?Exercicio1@@YAXXZ				; Exercicio1
 PUBLIC	?Exercicio2@@YAXXZ				; Exercicio2
+PUBLIC	?Exercicio3@@YAXXZ				; Exercicio3
+PUBLIC	?Exercicio4@@YAXXZ				; Exercicio4
+PUBLIC	?Exercicio5@@YAXXZ				; Exercicio5
+PUBLIC	?Exercicio6@@YAXXZ				; Exercicio6
 PUBLIC	_main
 PUBLIC	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
 PUBLIC	??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base
@@ -87,6 +91,7 @@ PUBLIC	??_C@_0O@NFOCKKMG@Hello?5World?$CB?6@		; `string'
 PUBLIC	??_C@_0L@IGKLLFEF@Valor?5?$DN?5?$CFi@		; `string'
 PUBLIC	??_C@_06NJEHJNMA@FACENS@			; `string'
 PUBLIC	??_C@_06DGLOOOEP@teste?$AA@			; `string'
+PUBLIC	??_C@_06COKEKNID@abcde?$AA@			; `string'
 EXTRN	_strlen:PROC
 EXTRN	?uncaught_exception@std@@YA_NXZ:PROC		; std::uncaught_exception
 EXTRN	__imp_?good@ios_base@std@@QBE_NXZ:PROC
@@ -118,6 +123,10 @@ rtc$TMZ	ENDS
 rtc$IMZ	SEGMENT
 __RTC_InitBase.rtc$IMZ DD FLAT:__RTC_InitBase
 rtc$IMZ	ENDS
+;	COMDAT ??_C@_06COKEKNID@abcde?$AA@
+CONST	SEGMENT
+??_C@_06COKEKNID@abcde?$AA@ DB 'abcde', 00H, 00H	; `string'
+CONST	ENDS
 ;	COMDAT ??_C@_06DGLOOOEP@teste?$AA@
 CONST	SEGMENT
 ??_C@_06DGLOOOEP@teste?$AA@ DB 'teste', 00H, 00H	; `string'
@@ -1361,7 +1370,7 @@ text$x	ENDS
 _TEXT	SEGMENT
 _main	PROC						; COMDAT
 
-; 20   : {
+; 24   : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -1378,7 +1387,7 @@ _main	PROC						; COMDAT
   0001e	b9 00 00 00 00	 mov	 ecx, OFFSET __A8B04EBD_exemplos_x86@cpp
   00023	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
 
-; 21   :     std::cout << "Hello World!\n";
+; 25   :     std::cout << "Hello World!\n";
 
   00028	68 00 00 00 00	 push	 OFFSET ??_C@_0O@NFOCKKMG@Hello?5World?$CB?6@
   0002d	a1 00 00 00 00	 mov	 eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
@@ -1386,38 +1395,586 @@ _main	PROC						; COMDAT
   00033	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
   00038	83 c4 08	 add	 esp, 8
 
-; 22   : 
-; 23   : 	//Exemplo1();
-; 24   : 	//Exemplo2();
-; 25   : 	//Exemplo3();
-; 26   : 	//Exemplo4();
-; 27   : 	//Exemplo5();
-; 28   : 	//Relogio();
-; 29   : 	//Delta();
-; 30   : 	//Facens();
-; 31   : 	//Maior();
-; 32   : 	Exercicio1();
+; 26   : 
+; 27   : 	//Exemplo1();
+; 28   : 	//Exemplo2();
+; 29   : 	//Exemplo3();
+; 30   : 	//Exemplo4();
+; 31   : 	//Exemplo5();
+; 32   : 	//Relogio();
+; 33   : 	//Delta();
+; 34   : 	//Facens();
+; 35   : 	//Maior();
+; 36   : 	Exercicio1();
 
   0003b	e8 00 00 00 00	 call	 ?Exercicio1@@YAXXZ	; Exercicio1
 
-; 33   : 	Exercicio2();
+; 37   : 	Exercicio2();
 
   00040	e8 00 00 00 00	 call	 ?Exercicio2@@YAXXZ	; Exercicio2
 
-; 34   : }
+; 38   : 	Exercicio3();
 
-  00045	33 c0		 xor	 eax, eax
-  00047	5f		 pop	 edi
-  00048	5e		 pop	 esi
-  00049	5b		 pop	 ebx
-  0004a	81 c4 c0 00 00
+  00045	e8 00 00 00 00	 call	 ?Exercicio3@@YAXXZ	; Exercicio3
+
+; 39   : 	Exercicio4();
+
+  0004a	e8 00 00 00 00	 call	 ?Exercicio4@@YAXXZ	; Exercicio4
+
+; 40   : 	Exercicio5();
+
+  0004f	e8 00 00 00 00	 call	 ?Exercicio5@@YAXXZ	; Exercicio5
+
+; 41   : 	Exercicio6();
+
+  00054	e8 00 00 00 00	 call	 ?Exercicio6@@YAXXZ	; Exercicio6
+
+; 42   : }
+
+  00059	33 c0		 xor	 eax, eax
+  0005b	5f		 pop	 edi
+  0005c	5e		 pop	 esi
+  0005d	5b		 pop	 ebx
+  0005e	81 c4 c0 00 00
 	00		 add	 esp, 192		; 000000c0H
-  00050	3b ec		 cmp	 ebp, esp
-  00052	e8 00 00 00 00	 call	 __RTC_CheckEsp
-  00057	8b e5		 mov	 esp, ebp
-  00059	5d		 pop	 ebp
-  0005a	c3		 ret	 0
+  00064	3b ec		 cmp	 ebp, esp
+  00066	e8 00 00 00 00	 call	 __RTC_CheckEsp
+  0006b	8b e5		 mov	 esp, ebp
+  0006d	5d		 pop	 ebp
+  0006e	c3		 ret	 0
 _main	ENDP
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+; File d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp
+;	COMDAT ?Exercicio6@@YAXXZ
+_TEXT	SEGMENT
+_isPrime$ = -36						; size = 4
+_incremento$ = -24					; size = 4
+_valor$ = -12						; size = 4
+__$ArrayPad$ = -4					; size = 4
+?Exercicio6@@YAXXZ PROC					; Exercicio6, COMDAT
+
+; 347  : void Exercicio6(void) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	81 ec e8 00 00
+	00		 sub	 esp, 232		; 000000e8H
+  00009	53		 push	 ebx
+  0000a	56		 push	 esi
+  0000b	57		 push	 edi
+  0000c	8d bd 18 ff ff
+	ff		 lea	 edi, DWORD PTR [ebp-232]
+  00012	b9 3a 00 00 00	 mov	 ecx, 58			; 0000003aH
+  00017	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  0001c	f3 ab		 rep stosd
+  0001e	a1 00 00 00 00	 mov	 eax, DWORD PTR ___security_cookie
+  00023	33 c5		 xor	 eax, ebp
+  00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
+
+; 348  : 	//só funcionará para valores maiores ou iguais a 2
+; 349  : 	int valor = 83;
+
+  00028	c7 45 f4 53 00
+	00 00		 mov	 DWORD PTR _valor$[ebp], 83 ; 00000053H
+
+; 350  : 	int incremento = 2;
+
+  0002f	c7 45 e8 02 00
+	00 00		 mov	 DWORD PTR _incremento$[ebp], 2
+
+; 351  : 	int isPrime = 0;
+
+  00036	c7 45 dc 00 00
+	00 00		 mov	 DWORD PTR _isPrime$[ebp], 0
+
+; 352  : 
+; 353  : 	__asm {
+; 354  : 		mov edx, 0
+
+  0003d	ba 00 00 00 00	 mov	 edx, 0
+
+; 355  : 		mov eax, [valor]
+
+  00042	8b 45 f4	 mov	 eax, DWORD PTR _valor$[ebp]
+
+; 356  : 		idiv [incremento]
+
+  00045	f7 7d e8	 idiv	 DWORD PTR _incremento$[ebp]
+
+; 357  : 		inc	[incremento]
+
+  00048	ff 45 e8	 inc	 DWORD PTR _incremento$[ebp]
+
+; 358  : 		cmp edx, 0
+
+  0004b	83 fa 00	 cmp	 edx, 0
+
+; 359  : 		je FIMFALSE
+
+  0004e	74 27		 je	 SHORT $FIMFALSE$3
+$START$4:
+
+; 360  : 		START :
+; 361  : 			mov eax, valor
+
+  00050	8b 45 f4	 mov	 eax, DWORD PTR _valor$[ebp]
+
+; 362  : 			cmp [incremento], eax
+
+  00053	39 45 e8	 cmp	 DWORD PTR _incremento$[ebp], eax
+
+; 363  : 			jge FIMTRUE
+
+  00056	7d 16		 jge	 SHORT $FIMTRUE$5
+
+; 364  : 			mov edx, 0
+
+  00058	ba 00 00 00 00	 mov	 edx, 0
+
+; 365  : 			mov eax, [valor]
+
+  0005d	8b 45 f4	 mov	 eax, DWORD PTR _valor$[ebp]
+
+; 366  : 			idiv[incremento]
+
+  00060	f7 7d e8	 idiv	 DWORD PTR _incremento$[ebp]
+
+; 367  : 			cmp edx, 0
+
+  00063	83 fa 00	 cmp	 edx, 0
+
+; 368  : 			je FIMFALSE
+
+  00066	74 0f		 je	 SHORT $FIMFALSE$3
+
+; 369  : 			add [incremento], 2
+
+  00068	83 45 e8 02	 add	 DWORD PTR _incremento$[ebp], 2
+
+; 370  : 			jmp START
+
+  0006c	eb e2		 jmp	 SHORT $START$4
+$FIMTRUE$5:
+
+; 371  : 
+; 372  : 		FIMTRUE:	
+; 373  : 			mov [isPrime], 1
+
+  0006e	c7 45 dc 01 00
+	00 00		 mov	 DWORD PTR _isPrime$[ebp], 1
+
+; 374  : 			jmp FIM
+
+  00075	eb 07		 jmp	 SHORT $FIM$6
+$FIMFALSE$3:
+
+; 375  : 		FIMFALSE:
+; 376  : 			mov [isPrime], 0
+
+  00077	c7 45 dc 00 00
+	00 00		 mov	 DWORD PTR _isPrime$[ebp], 0
+$FIM$6:
+
+; 377  : 		FIM:
+; 378  : 	}
+; 379  : }
+
+  0007e	5f		 pop	 edi
+  0007f	5e		 pop	 esi
+  00080	5b		 pop	 ebx
+  00081	8b 4d fc	 mov	 ecx, DWORD PTR __$ArrayPad$[ebp]
+  00084	33 cd		 xor	 ecx, ebp
+  00086	e8 00 00 00 00	 call	 @__security_check_cookie@4
+  0008b	81 c4 e8 00 00
+	00		 add	 esp, 232		; 000000e8H
+  00091	3b ec		 cmp	 ebp, esp
+  00093	e8 00 00 00 00	 call	 __RTC_CheckEsp
+  00098	8b e5		 mov	 esp, ebp
+  0009a	5d		 pop	 ebp
+  0009b	c3		 ret	 0
+?Exercicio6@@YAXXZ ENDP					; Exercicio6
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+; File d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp
+;	COMDAT ?Exercicio5@@YAXXZ
+_TEXT	SEGMENT
+_cont$ = -52						; size = 4
+_maior$ = -40						; size = 4
+_lista$ = -28						; size = 20
+__$ArrayPad$ = -4					; size = 4
+?Exercicio5@@YAXXZ PROC					; Exercicio5, COMDAT
+
+; 315  : void Exercicio5(void) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	81 ec f8 00 00
+	00		 sub	 esp, 248		; 000000f8H
+  00009	53		 push	 ebx
+  0000a	56		 push	 esi
+  0000b	57		 push	 edi
+  0000c	8d bd 08 ff ff
+	ff		 lea	 edi, DWORD PTR [ebp-248]
+  00012	b9 3e 00 00 00	 mov	 ecx, 62			; 0000003eH
+  00017	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  0001c	f3 ab		 rep stosd
+  0001e	a1 00 00 00 00	 mov	 eax, DWORD PTR ___security_cookie
+  00023	33 c5		 xor	 eax, ebp
+  00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
+
+; 316  : 	int lista[] = { 5, 30, 15, 20, 25 };
+
+  00028	c7 45 e4 05 00
+	00 00		 mov	 DWORD PTR _lista$[ebp], 5
+  0002f	c7 45 e8 1e 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+4], 30 ; 0000001eH
+  00036	c7 45 ec 0f 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+8], 15 ; 0000000fH
+  0003d	c7 45 f0 14 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+12], 20 ; 00000014H
+  00044	c7 45 f4 19 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+16], 25 ; 00000019H
+
+; 317  : 	int maior;
+; 318  : 	int cont = 0;
+
+  0004b	c7 45 cc 00 00
+	00 00		 mov	 DWORD PTR _cont$[ebp], 0
+
+; 319  : 
+; 320  : 	__asm {
+; 321  : 		mov ecx, 0
+
+  00052	b9 00 00 00 00	 mov	 ecx, 0
+
+; 322  : 		mov eax, DWORD PTR[lista + ecx*4]
+
+  00057	8b 84 8d e4 ff
+	ff ff		 mov	 eax, DWORD PTR _lista$[ebp+ecx*4]
+
+; 323  : 		mov[maior], eax
+
+  0005e	89 45 d8	 mov	 DWORD PTR _maior$[ebp], eax
+
+; 324  : 		inc ecx
+
+  00061	41		 inc	 ecx
+$INICIO$6:
+
+; 325  : 
+; 326  : 		INICIO :
+; 327  : 			mov eax, [maior]
+
+  00062	8b 45 d8	 mov	 eax, DWORD PTR _maior$[ebp]
+
+; 328  : 			cmp eax, DWORD PTR[lista + ecx*4]
+
+  00065	3b 84 8d e4 ff
+	ff ff		 cmp	 eax, DWORD PTR _lista$[ebp+ecx*4]
+
+; 329  : 			jl MAIORTRUE
+
+  0006c	7c 02		 jl	 SHORT $MAIORTRUE$7
+
+; 330  : 			jg MAIORFALSE
+
+  0006e	7f 0a		 jg	 SHORT $MAIORFALSE$8
+$MAIORTRUE$7:
+
+; 331  : 
+; 332  : 		MAIORTRUE :
+; 333  : 			mov eax, DWORD PTR[lista + ecx*4]
+
+  00070	8b 84 8d e4 ff
+	ff ff		 mov	 eax, DWORD PTR _lista$[ebp+ecx*4]
+
+; 334  : 			mov[maior], eax
+
+  00077	89 45 d8	 mov	 DWORD PTR _maior$[ebp], eax
+$MAIORFALSE$8:
+
+; 335  : 		MAIORFALSE :
+; 336  : 			inc ecx
+
+  0007a	41		 inc	 ecx
+
+; 337  : 			inc cont
+
+  0007b	ff 45 cc	 inc	 DWORD PTR _cont$[ebp]
+
+; 338  : 			cmp cont, 5
+
+  0007e	83 7d cc 05	 cmp	 DWORD PTR _cont$[ebp], 5
+
+; 339  : 			jl INICIO
+
+  00082	7c de		 jl	 SHORT $INICIO$6
+
+; 340  : 			jmp FIM
+
+  00084	eb 00		 jmp	 SHORT $FIM$9
+$FIM$9:
+
+; 341  : 
+; 342  : 		FIM :
+; 343  : 
+; 344  : 	}
+; 345  : }
+
+  00086	52		 push	 edx
+  00087	8b cd		 mov	 ecx, ebp
+  00089	50		 push	 eax
+  0008a	8d 15 00 00 00
+	00		 lea	 edx, DWORD PTR $LN5@Exercicio5
+  00090	e8 00 00 00 00	 call	 @_RTC_CheckStackVars@8
+  00095	58		 pop	 eax
+  00096	5a		 pop	 edx
+  00097	5f		 pop	 edi
+  00098	5e		 pop	 esi
+  00099	5b		 pop	 ebx
+  0009a	8b 4d fc	 mov	 ecx, DWORD PTR __$ArrayPad$[ebp]
+  0009d	33 cd		 xor	 ecx, ebp
+  0009f	e8 00 00 00 00	 call	 @__security_check_cookie@4
+  000a4	81 c4 f8 00 00
+	00		 add	 esp, 248		; 000000f8H
+  000aa	3b ec		 cmp	 ebp, esp
+  000ac	e8 00 00 00 00	 call	 __RTC_CheckEsp
+  000b1	8b e5		 mov	 esp, ebp
+  000b3	5d		 pop	 ebp
+  000b4	c3		 ret	 0
+  000b5	0f 1f 00	 npad	 3
+$LN5@Exercicio5:
+  000b8	01 00 00 00	 DD	 1
+  000bc	00 00 00 00	 DD	 $LN4@Exercicio5
+$LN4@Exercicio5:
+  000c0	e4 ff ff ff	 DD	 -28			; ffffffe4H
+  000c4	14 00 00 00	 DD	 20			; 00000014H
+  000c8	00 00 00 00	 DD	 $LN3@Exercicio5
+$LN3@Exercicio5:
+  000cc	6c		 DB	 108			; 0000006cH
+  000cd	69		 DB	 105			; 00000069H
+  000ce	73		 DB	 115			; 00000073H
+  000cf	74		 DB	 116			; 00000074H
+  000d0	61		 DB	 97			; 00000061H
+  000d1	00		 DB	 0
+?Exercicio5@@YAXXZ ENDP					; Exercicio5
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+; File d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp
+;	COMDAT ?Exercicio4@@YAXXZ
+_TEXT	SEGMENT
+_cinco$ = -64						; size = 4
+_result$ = -52						; size = 4
+_soma$ = -40						; size = 4
+_lista$ = -28						; size = 20
+__$ArrayPad$ = -4					; size = 4
+?Exercicio4@@YAXXZ PROC					; Exercicio4, COMDAT
+
+; 295  : void Exercicio4(void) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	81 ec 04 01 00
+	00		 sub	 esp, 260		; 00000104H
+  00009	53		 push	 ebx
+  0000a	56		 push	 esi
+  0000b	57		 push	 edi
+  0000c	8d bd fc fe ff
+	ff		 lea	 edi, DWORD PTR [ebp-260]
+  00012	b9 41 00 00 00	 mov	 ecx, 65			; 00000041H
+  00017	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  0001c	f3 ab		 rep stosd
+  0001e	a1 00 00 00 00	 mov	 eax, DWORD PTR ___security_cookie
+  00023	33 c5		 xor	 eax, ebp
+  00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
+
+; 296  : 	int lista[] = { 5, 10, 15, 20, 25 };
+
+  00028	c7 45 e4 05 00
+	00 00		 mov	 DWORD PTR _lista$[ebp], 5
+  0002f	c7 45 e8 0a 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+4], 10 ; 0000000aH
+  00036	c7 45 ec 0f 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+8], 15 ; 0000000fH
+  0003d	c7 45 f0 14 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+12], 20 ; 00000014H
+  00044	c7 45 f4 19 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+16], 25 ; 00000019H
+
+; 297  : 	int soma = 0, result, cinco = 5;
+
+  0004b	c7 45 d8 00 00
+	00 00		 mov	 DWORD PTR _soma$[ebp], 0
+  00052	c7 45 c0 05 00
+	00 00		 mov	 DWORD PTR _cinco$[ebp], 5
+
+; 298  : 
+; 299  : 	__asm {
+; 300  : 		mov ecx, 0
+
+  00059	b9 00 00 00 00	 mov	 ecx, 0
+$START$6:
+
+; 301  : 		START:
+; 302  : 			mov eax, DWORD PTR[lista + ecx*4]
+
+  0005e	8b 84 8d e4 ff
+	ff ff		 mov	 eax, DWORD PTR _lista$[ebp+ecx*4]
+
+; 303  : 			add eax, [soma]
+
+  00065	03 45 d8	 add	 eax, DWORD PTR _soma$[ebp]
+
+; 304  : 			mov [soma], eax
+
+  00068	89 45 d8	 mov	 DWORD PTR _soma$[ebp], eax
+
+; 305  : 			inc ecx
+
+  0006b	41		 inc	 ecx
+
+; 306  : 			cmp ecx, 5
+
+  0006c	83 f9 05	 cmp	 ecx, 5
+
+; 307  : 			jl START
+
+  0006f	7c ed		 jl	 SHORT $START$6
+
+; 308  : 			mov edx, 0
+
+  00071	ba 00 00 00 00	 mov	 edx, 0
+
+; 309  : 			mov eax, [soma]
+
+  00076	8b 45 d8	 mov	 eax, DWORD PTR _soma$[ebp]
+
+; 310  : 			idiv ecx
+
+  00079	f7 f9		 idiv	 ecx
+
+; 311  : 			mov result, eax
+
+  0007b	89 45 cc	 mov	 DWORD PTR _result$[ebp], eax
+
+; 312  : 	}
+; 313  : }
+
+  0007e	52		 push	 edx
+  0007f	8b cd		 mov	 ecx, ebp
+  00081	50		 push	 eax
+  00082	8d 15 00 00 00
+	00		 lea	 edx, DWORD PTR $LN5@Exercicio4
+  00088	e8 00 00 00 00	 call	 @_RTC_CheckStackVars@8
+  0008d	58		 pop	 eax
+  0008e	5a		 pop	 edx
+  0008f	5f		 pop	 edi
+  00090	5e		 pop	 esi
+  00091	5b		 pop	 ebx
+  00092	8b 4d fc	 mov	 ecx, DWORD PTR __$ArrayPad$[ebp]
+  00095	33 cd		 xor	 ecx, ebp
+  00097	e8 00 00 00 00	 call	 @__security_check_cookie@4
+  0009c	81 c4 04 01 00
+	00		 add	 esp, 260		; 00000104H
+  000a2	3b ec		 cmp	 ebp, esp
+  000a4	e8 00 00 00 00	 call	 __RTC_CheckEsp
+  000a9	8b e5		 mov	 esp, ebp
+  000ab	5d		 pop	 ebp
+  000ac	c3		 ret	 0
+  000ad	0f 1f 00	 npad	 3
+$LN5@Exercicio4:
+  000b0	01 00 00 00	 DD	 1
+  000b4	00 00 00 00	 DD	 $LN4@Exercicio4
+$LN4@Exercicio4:
+  000b8	e4 ff ff ff	 DD	 -28			; ffffffe4H
+  000bc	14 00 00 00	 DD	 20			; 00000014H
+  000c0	00 00 00 00	 DD	 $LN3@Exercicio4
+$LN3@Exercicio4:
+  000c4	6c		 DB	 108			; 0000006cH
+  000c5	69		 DB	 105			; 00000069H
+  000c6	73		 DB	 115			; 00000073H
+  000c7	74		 DB	 116			; 00000074H
+  000c8	61		 DB	 97			; 00000061H
+  000c9	00		 DB	 0
+?Exercicio4@@YAXXZ ENDP					; Exercicio4
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+; File d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp
+;	COMDAT ?Exercicio3@@YAXXZ
+_TEXT	SEGMENT
+_lista$ = -28						; size = 24
+?Exercicio3@@YAXXZ PROC					; Exercicio3, COMDAT
+
+; 288  : void Exercicio3(void) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	81 ec e0 00 00
+	00		 sub	 esp, 224		; 000000e0H
+  00009	53		 push	 ebx
+  0000a	56		 push	 esi
+  0000b	57		 push	 edi
+  0000c	8d bd 20 ff ff
+	ff		 lea	 edi, DWORD PTR [ebp-224]
+  00012	b9 38 00 00 00	 mov	 ecx, 56			; 00000038H
+  00017	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  0001c	f3 ab		 rep stosd
+
+; 289  : 	int lista[] = { 20,15,10,18,5,7 };
+
+  0001e	c7 45 e4 14 00
+	00 00		 mov	 DWORD PTR _lista$[ebp], 20 ; 00000014H
+  00025	c7 45 e8 0f 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+4], 15 ; 0000000fH
+  0002c	c7 45 ec 0a 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+8], 10 ; 0000000aH
+  00033	c7 45 f0 12 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+12], 18 ; 00000012H
+  0003a	c7 45 f4 05 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+16], 5
+  00041	c7 45 f8 07 00
+	00 00		 mov	 DWORD PTR _lista$[ebp+20], 7
+
+; 290  : 
+; 291  : 	__asm {
+; 292  : 	}
+; 293  : }
+
+  00048	52		 push	 edx
+  00049	8b cd		 mov	 ecx, ebp
+  0004b	50		 push	 eax
+  0004c	8d 15 00 00 00
+	00		 lea	 edx, DWORD PTR $LN5@Exercicio3
+  00052	e8 00 00 00 00	 call	 @_RTC_CheckStackVars@8
+  00057	58		 pop	 eax
+  00058	5a		 pop	 edx
+  00059	5f		 pop	 edi
+  0005a	5e		 pop	 esi
+  0005b	5b		 pop	 ebx
+  0005c	81 c4 e0 00 00
+	00		 add	 esp, 224		; 000000e0H
+  00062	3b ec		 cmp	 ebp, esp
+  00064	e8 00 00 00 00	 call	 __RTC_CheckEsp
+  00069	8b e5		 mov	 esp, ebp
+  0006b	5d		 pop	 ebp
+  0006c	c3		 ret	 0
+  0006d	0f 1f 00	 npad	 3
+$LN5@Exercicio3:
+  00070	01 00 00 00	 DD	 1
+  00074	00 00 00 00	 DD	 $LN4@Exercicio3
+$LN4@Exercicio3:
+  00078	e4 ff ff ff	 DD	 -28			; ffffffe4H
+  0007c	18 00 00 00	 DD	 24			; 00000018H
+  00080	00 00 00 00	 DD	 $LN3@Exercicio3
+$LN3@Exercicio3:
+  00084	6c		 DB	 108			; 0000006cH
+  00085	69		 DB	 105			; 00000069H
+  00086	73		 DB	 115			; 00000073H
+  00087	74		 DB	 116			; 00000074H
+  00088	61		 DB	 97			; 00000061H
+  00089	00		 DB	 0
+?Exercicio3@@YAXXZ ENDP					; Exercicio3
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ; File d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp
@@ -1429,7 +1986,7 @@ _string1$ = -16						; size = 7
 __$ArrayPad$ = -4					; size = 4
 ?Exercicio2@@YAXXZ PROC					; Exercicio2, COMDAT
 
-; 255  : void Exercicio2(void) {
+; 264  : void Exercicio2(void) {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -1447,7 +2004,7 @@ __$ArrayPad$ = -4					; size = 4
   00023	33 c5		 xor	 eax, ebp
   00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
 
-; 256  : 	char string1[] = "teste\0";
+; 265  : 	char string1[] = "teste\0";
 
   00028	a1 00 00 00 00	 mov	 eax, DWORD PTR ??_C@_06DGLOOOEP@teste?$AA@
   0002d	89 45 f0	 mov	 DWORD PTR _string1$[ebp], eax
@@ -1458,75 +2015,75 @@ __$ArrayPad$ = -4					; size = 4
 	00		 mov	 dl, BYTE PTR ??_C@_06DGLOOOEP@teste?$AA@+6
   00041	88 55 f6	 mov	 BYTE PTR _string1$[ebp+6], dl
 
-; 257  : 	char string2[] = "teste\0";
+; 266  : 	char string2[] = "abcde\0";
 
-  00044	a1 00 00 00 00	 mov	 eax, DWORD PTR ??_C@_06DGLOOOEP@teste?$AA@
+  00044	a1 00 00 00 00	 mov	 eax, DWORD PTR ??_C@_06COKEKNID@abcde?$AA@
   00049	89 45 e0	 mov	 DWORD PTR _string2$[ebp], eax
   0004c	66 8b 0d 04 00
-	00 00		 mov	 cx, WORD PTR ??_C@_06DGLOOOEP@teste?$AA@+4
+	00 00		 mov	 cx, WORD PTR ??_C@_06COKEKNID@abcde?$AA@+4
   00053	66 89 4d e4	 mov	 WORD PTR _string2$[ebp+4], cx
   00057	8a 15 06 00 00
-	00		 mov	 dl, BYTE PTR ??_C@_06DGLOOOEP@teste?$AA@+6
+	00		 mov	 dl, BYTE PTR ??_C@_06COKEKNID@abcde?$AA@+6
   0005d	88 55 e6	 mov	 BYTE PTR _string2$[ebp+6], dl
 
-; 258  : 	bool result = 1;
+; 267  : 	bool result = true;
 
   00060	c6 45 d7 01	 mov	 BYTE PTR _result$[ebp], 1
 
-; 259  : 
-; 260  : 	__asm {
-; 261  : 		mov ecx, 0
+; 268  : 
+; 269  : 	__asm {
+; 270  : 		mov ecx, 0
 
   00064	b9 00 00 00 00	 mov	 ecx, 0
 $START$7:
 
-; 262  : 		START:
-; 263  : 			mov eax, DWORD PTR[string1 + ecx]
+; 271  : 		START:
+; 272  : 			mov eax, DWORD PTR[string1 + ecx]
 
   00069	8b 84 0d f0 ff
 	ff ff		 mov	 eax, DWORD PTR _string1$[ebp+ecx]
 
-; 264  : 			cmp eax, DWORD PTR[string2 + ecx]
+; 273  : 			cmp eax, DWORD PTR[string2 + ecx]
 
   00070	3b 84 0d e0 ff
 	ff ff		 cmp	 eax, DWORD PTR _string2$[ebp+ecx]
 
-; 265  : 			je FIND
+; 274  : 			je FIND
 
   00077	74 06		 je	 SHORT $FIND$8
 
-; 266  : 			mov result, 0
+; 275  : 			mov result, 0
 
   00079	c6 45 d7 00	 mov	 BYTE PTR _result$[ebp], 0
 
-; 267  : 			jmp END
+; 276  : 			jmp END
 
   0007d	eb 08		 jmp	 SHORT $END$9
 $FIND$8:
 
-; 268  : 
-; 269  : 		FIND:
-; 270  : 			inc ecx
+; 277  : 
+; 278  : 		FIND:
+; 279  : 			inc ecx
 
   0007f	41		 inc	 ecx
 
-; 271  : 			cmp ecx, 6
+; 280  : 			cmp ecx, 6
 
   00080	83 f9 06	 cmp	 ecx, 6
 
-; 272  : 			jg END
+; 281  : 			jg END
 
   00083	7f 02		 jg	 SHORT $END$9
 
-; 273  : 			jmp START
+; 282  : 			jmp START
 
   00085	eb e2		 jmp	 SHORT $START$7
 $END$9:
 
-; 274  : 
-; 275  : 		END:
-; 276  : 	}
-; 277  : }
+; 283  : 
+; 284  : 		END:
+; 285  : 	}
+; 286  : }
 
   00087	52		 push	 edx
   00088	8b cd		 mov	 ecx, ebp
@@ -1590,7 +2147,7 @@ _lista$ = -32						; size = 24
 __$ArrayPad$ = -4					; size = 4
 ?Exercicio1@@YAXXZ PROC					; Exercicio1, COMDAT
 
-; 231  : void Exercicio1(void) {
+; 239  : void Exercicio1(void) {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -1608,7 +2165,7 @@ __$ArrayPad$ = -4					; size = 4
   00023	33 c5		 xor	 eax, ebp
   00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
 
-; 232  : 	int lista[] = { 1,2,3,4,2,1 };
+; 240  : 	int lista[] = { 1,2,3,4,2,1 };
 
   00028	c7 45 e0 01 00
 	00 00		 mov	 DWORD PTR _lista$[ebp], 1
@@ -1623,73 +2180,73 @@ __$ArrayPad$ = -4					; size = 4
   0004b	c7 45 f4 01 00
 	00 00		 mov	 DWORD PTR _lista$[ebp+20], 1
 
-; 233  : 	int valor = 1;
+; 241  : 	int valor = 1;
 
   00052	c7 45 d4 01 00
 	00 00		 mov	 DWORD PTR _valor$[ebp], 1
 
-; 234  : 	int cont = 0;
+; 242  : 	int cont = 0;
 
   00059	c7 45 c8 00 00
 	00 00		 mov	 DWORD PTR _cont$[ebp], 0
 
-; 235  : 
-; 236  : 	__asm {
-; 237  : 		mov ecx, 0
+; 243  : 
+; 244  : 	__asm {
+; 245  : 		mov ecx, 0
 
   00060	b9 00 00 00 00	 mov	 ecx, 0
 $START$6:
 
-; 238  : 		START:
-; 239  : 		mov eax, DWORD PTR[lista + ecx * 4]
+; 246  : 		START:
+; 247  : 		mov eax, DWORD PTR[lista + ecx * 4]
 
   00065	8b 84 8d e0 ff
 	ff ff		 mov	 eax, DWORD PTR _lista$[ebp+ecx*4]
 
-; 240  : 			cmp eax, valor
+; 248  : 			cmp eax, valor
 
   0006c	3b 45 d4	 cmp	 eax, DWORD PTR _valor$[ebp]
 
-; 241  : 			je FIND
+; 249  : 			je FIND
 
   0006f	74 08		 je	 SHORT $FIND$7
 
-; 242  : 			inc ecx
+; 250  : 			inc ecx
 
   00071	41		 inc	 ecx
 
-; 243  : 			cmp ecx, 6
+; 251  : 			cmp ecx, 6
 
   00072	83 f9 06	 cmp	 ecx, 6
 
-; 244  : 			jg END
+; 252  : 			jg END
 
   00075	7f 08		 jg	 SHORT $END$8
 
-; 245  : 			jmp START
+; 253  : 			jmp START
 
   00077	eb ec		 jmp	 SHORT $START$6
 $FIND$7:
 
-; 246  : 
-; 247  : 			FIND :
-; 248  : 		inc cont
+; 254  : 
+; 255  : 			FIND :
+; 256  : 		inc cont
 
   00079	ff 45 c8	 inc	 DWORD PTR _cont$[ebp]
 
-; 249  : 			inc ecx
+; 257  : 			inc ecx
 
   0007c	41		 inc	 ecx
 
-; 250  : 			jmp START
+; 258  : 			jmp START
 
   0007d	eb e6		 jmp	 SHORT $START$6
 $END$8:
 
-; 251  : 
-; 252  : 			END :
-; 253  : 	}
-; 254  : }
+; 259  : 
+; 260  : 			END :
+; 261  : 	}
+; 262  : }
 
   0007f	52		 push	 edx
   00080	8b cd		 mov	 ecx, ebp
@@ -1741,7 +2298,7 @@ _v$ = -48						; size = 40
 __$ArrayPad$ = -4					; size = 4
 ?Maior@@YAXXZ PROC					; Maior, COMDAT
 
-; 201  : void Maior(void) {
+; 209  : void Maior(void) {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -1759,7 +2316,7 @@ __$ArrayPad$ = -4					; size = 4
   00023	33 c5		 xor	 eax, ebp
   00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
 
-; 202  : 	int v[10] = { 3, 153, 4, 7, 12, 20, 133, 11, 9, 144 }, maior, indice = 4, inteiro = 4, cont = 0;
+; 210  : 	int v[10] = { 3, 153, 4, 7, 12, 20, 133, 11, 9, 144 }, maior, indice = 4, inteiro = 4, cont = 0;
 
   00028	c7 45 d0 03 00
 	00 00		 mov	 DWORD PTR _v$[ebp], 3
@@ -1788,88 +2345,88 @@ __$ArrayPad$ = -4					; size = 4
   0007c	c7 45 a0 00 00
 	00 00		 mov	 DWORD PTR _cont$[ebp], 0
 
-; 203  : 
-; 204  : 	__asm {
-; 205  : 		mov eax, DWORD PTR[v]
+; 211  : 
+; 212  : 	__asm {
+; 213  : 		mov eax, DWORD PTR[v]
 
   00083	8b 45 d0	 mov	 eax, DWORD PTR _v$[ebp]
 
-; 206  : 		mov[maior], eax
+; 214  : 		mov[maior], eax
 
   00086	89 45 c4	 mov	 DWORD PTR _maior$[ebp], eax
 $INICIO$6:
 
-; 207  : 
-; 208  : 		INICIO :
-; 209  : 			mov ecx, indice
+; 215  : 
+; 216  : 		INICIO :
+; 217  : 			mov ecx, indice
 
   00089	8b 4d b8	 mov	 ecx, DWORD PTR _indice$[ebp]
 
-; 210  : 			mov eax, [maior]
+; 218  : 			mov eax, [maior]
 
   0008c	8b 45 c4	 mov	 eax, DWORD PTR _maior$[ebp]
 
-; 211  : 			cmp eax, DWORD PTR[v + ecx]
+; 219  : 			cmp eax, DWORD PTR[v + ecx]
 
   0008f	3b 84 0d d0 ff
 	ff ff		 cmp	 eax, DWORD PTR _v$[ebp+ecx]
 
-; 212  : 			jl MAIORTRUE
+; 220  : 			jl MAIORTRUE
 
   00096	7c 02		 jl	 SHORT $MAIORTRUE$7
 
-; 213  : 			jg MAIORFALSE
+; 221  : 			jg MAIORFALSE
 
   00098	7f 0a		 jg	 SHORT $MAIORFALSE$8
 $MAIORTRUE$7:
 
-; 214  : 
-; 215  : 		MAIORTRUE :
-; 216  : 			mov eax, DWORD PTR[v + ecx]
+; 222  : 
+; 223  : 		MAIORTRUE :
+; 224  : 			mov eax, DWORD PTR[v + ecx]
 
   0009a	8b 84 0d d0 ff
 	ff ff		 mov	 eax, DWORD PTR _v$[ebp+ecx]
 
-; 217  : 			mov[maior], eax
+; 225  : 			mov[maior], eax
 
   000a1	89 45 c4	 mov	 DWORD PTR _maior$[ebp], eax
 $MAIORFALSE$8:
 
-; 218  : 		MAIORFALSE :
-; 219  : 			mov ecx, [indice]
+; 226  : 		MAIORFALSE :
+; 227  : 			mov ecx, [indice]
 
   000a4	8b 4d b8	 mov	 ecx, DWORD PTR _indice$[ebp]
 
-; 220  : 			add ecx, [inteiro]
+; 228  : 			add ecx, [inteiro]
 
   000a7	03 4d ac	 add	 ecx, DWORD PTR _inteiro$[ebp]
 
-; 221  : 			mov[indice], ecx
+; 229  : 			mov[indice], ecx
 
   000aa	89 4d b8	 mov	 DWORD PTR _indice$[ebp], ecx
 
-; 222  : 			inc cont
+; 230  : 			inc cont
 
   000ad	ff 45 a0	 inc	 DWORD PTR _cont$[ebp]
 
-; 223  : 			cmp cont, 10
+; 231  : 			cmp cont, 10
 
   000b0	83 7d a0 0a	 cmp	 DWORD PTR _cont$[ebp], 10 ; 0000000aH
 
-; 224  : 			jl INICIO
+; 232  : 			jl INICIO
 
   000b4	7c d3		 jl	 SHORT $INICIO$6
 
-; 225  : 			jmp FIM
+; 233  : 			jmp FIM
 
   000b6	eb 00		 jmp	 SHORT $FIM$9
 $FIM$9:
 
-; 226  : 
-; 227  : 		FIM :
-; 228  : 
-; 229  : 	}
-; 230  : }
+; 234  : 
+; 235  : 		FIM :
+; 236  : 
+; 237  : 	}
+; 238  : }
 
   000b8	52		 push	 edx
   000b9	8b cd		 mov	 ecx, ebp
@@ -1914,7 +2471,7 @@ _str1$ = -16						; size = 7
 __$ArrayPad$ = -4					; size = 4
 ?Facens@@YAXXZ PROC					; Facens, COMDAT
 
-; 184  : void Facens(void) {
+; 192  : void Facens(void) {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -1932,7 +2489,7 @@ __$ArrayPad$ = -4					; size = 4
   00023	33 c5		 xor	 eax, ebp
   00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
 
-; 185  : 	char str1[7] = "FACENS";
+; 193  : 	char str1[7] = "FACENS";
 
   00028	a1 00 00 00 00	 mov	 eax, DWORD PTR ??_C@_06NJEHJNMA@FACENS@
   0002d	89 45 f0	 mov	 DWORD PTR _str1$[ebp], eax
@@ -1943,48 +2500,48 @@ __$ArrayPad$ = -4					; size = 4
 	00		 mov	 dl, BYTE PTR ??_C@_06NJEHJNMA@FACENS@+6
   00041	88 55 f6	 mov	 BYTE PTR _str1$[ebp+6], dl
 
-; 186  : 	char str2[7];
-; 187  : 
-; 188  : 	__asm {
-; 189  : 		mov esi, 0
+; 194  : 	char str2[7];
+; 195  : 
+; 196  : 	__asm {
+; 197  : 		mov esi, 0
 
   00044	be 00 00 00 00	 mov	 esi, 0
 $loop_contador$7:
 
-; 190  : 		loop_contador:
-; 191  : 			mov eax, esi
+; 198  : 		loop_contador:
+; 199  : 			mov eax, esi
 
   00049	8b c6		 mov	 eax, esi
 
-; 192  : 			mov ecx, esi
+; 200  : 			mov ecx, esi
 
   0004b	8b ce		 mov	 ecx, esi
 
-; 193  : 			mov dl, BYTE PTR [str1 + ecx]
+; 201  : 			mov dl, BYTE PTR [str1 + ecx]
 
   0004d	8a 94 0d f0 ff
 	ff ff		 mov	 dl, BYTE PTR _str1$[ebp+ecx]
 
-; 194  : 			mov BYTE PTR [str2 + eax], dl
+; 202  : 			mov BYTE PTR [str2 + eax], dl
 
   00054	88 94 05 e0 ff
 	ff ff		 mov	 BYTE PTR _str2$[ebp+eax], dl
 
-; 195  : 
-; 196  : 			inc esi
+; 203  : 
+; 204  : 			inc esi
 
   0005b	46		 inc	 esi
 
-; 197  : 			cmp esi, 6
+; 205  : 			cmp esi, 6
 
   0005c	83 fe 06	 cmp	 esi, 6
 
-; 198  : 			jl loop_contador
+; 206  : 			jl loop_contador
 
   0005f	7c e8		 jl	 SHORT $loop_contador$7
 
-; 199  : 	}
-; 200  : }
+; 207  : 	}
+; 208  : }
 
   00061	52		 push	 edx
   00062	8b cd		 mov	 ecx, ebp
@@ -2042,7 +2599,7 @@ _A$ = -12						; size = 4
 __$ArrayPad$ = -4					; size = 4
 ?Delta@@YAXXZ PROC					; Delta, COMDAT
 
-; 159  : void Delta(void) {
+; 167  : void Delta(void) {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -2060,82 +2617,82 @@ __$ArrayPad$ = -4					; size = 4
   00023	33 c5		 xor	 eax, ebp
   00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
 
-; 160  : 	int A = 1;
+; 168  : 	int A = 1;
 
   00028	c7 45 f4 01 00
 	00 00		 mov	 DWORD PTR _A$[ebp], 1
 
-; 161  : 	int B = 4;
+; 169  : 	int B = 4;
 
   0002f	c7 45 e8 04 00
 	00 00		 mov	 DWORD PTR _B$[ebp], 4
 
-; 162  : 	int C = 3;
+; 170  : 	int C = 3;
 
   00036	c7 45 dc 03 00
 	00 00		 mov	 DWORD PTR _C$[ebp], 3
 
-; 163  : 	int R;
-; 164  : 
-; 165  : 	__asm {
-; 166  : 		mov eax, [B]
+; 171  : 	int R;
+; 172  : 
+; 173  : 	__asm {
+; 174  : 		mov eax, [B]
 
   0003d	8b 45 e8	 mov	 eax, DWORD PTR _B$[ebp]
 
-; 167  : 		mul[B]
+; 175  : 		mul[B]
 
   00040	f7 65 e8	 mul	 DWORD PTR _B$[ebp]
 
-; 168  : 		mov [R], eax
+; 176  : 		mov [R], eax
 
   00043	89 45 d0	 mov	 DWORD PTR _R$[ebp], eax
 
-; 169  : 
-; 170  : 		mov eax, [A]
+; 177  : 
+; 178  : 		mov eax, [A]
 
   00046	8b 45 f4	 mov	 eax, DWORD PTR _A$[ebp]
 
-; 171  : 		mul [C]
+; 179  : 		mul [C]
 
   00049	f7 65 dc	 mul	 DWORD PTR _C$[ebp]
 
-; 172  : 		mov [A], eax
+; 180  : 		mov [A], eax
 
   0004c	89 45 f4	 mov	 DWORD PTR _A$[ebp], eax
 
-; 173  : 		mov [C], 4
+; 181  : 		mov [C], 4
 
   0004f	c7 45 dc 04 00
 	00 00		 mov	 DWORD PTR _C$[ebp], 4
 
-; 174  : 		mov eax, [A]
+; 182  : 		mov eax, [A]
 
   00056	8b 45 f4	 mov	 eax, DWORD PTR _A$[ebp]
 
-; 175  : 		mul [C]
+; 183  : 		mul [C]
 
   00059	f7 65 dc	 mul	 DWORD PTR _C$[ebp]
 
-; 176  : 		mov [A], eax
+; 184  : 		mov [A], eax
 
   0005c	89 45 f4	 mov	 DWORD PTR _A$[ebp], eax
 
-; 177  : 
-; 178  : 		mov eax, [R]
+; 185  : 
+; 186  : 		mov eax, [R]
 
   0005f	8b 45 d0	 mov	 eax, DWORD PTR _R$[ebp]
 
-; 179  : 		sub eax, [A]
+; 187  : 		sub eax, [A]
 
   00062	2b 45 f4	 sub	 eax, DWORD PTR _A$[ebp]
 
-; 180  : 		mov [R], eax
+; 188  : 		mov [R], eax
 
   00065	89 45 d0	 mov	 DWORD PTR _R$[ebp], eax
 
-; 181  : 
-; 182  : 	}
-; 183  : }
+; 189  : 
+; 190  : 	}
+; 191  : }
 
   00068	5f		 pop	 edi
   00069	5e		 pop	 esi
@@ -2161,7 +2718,7 @@ _minutos$ = -12						; size = 4
 __$ArrayPad$ = -4					; size = 4
 ?Relogio@@YAXXZ PROC					; Relogio, COMDAT
 
-; 140  : void Relogio(void) {
+; 148  : void Relogio(void) {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -2179,61 +2736,61 @@ __$ArrayPad$ = -4					; size = 4
   00023	33 c5		 xor	 eax, ebp
   00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
 
-; 141  : 	int minutos = 0;
+; 149  : 	int minutos = 0;
 
   00028	c7 45 f4 00 00
 	00 00		 mov	 DWORD PTR _minutos$[ebp], 0
 $loop_minutos$3:
 
-; 142  : 	int segundos;
-; 143  : 
-; 144  : 	__asm {
-; 145  : 		loop_minutos:
-; 146  : 			mov ecx, 0
+; 150  : 	int segundos;
+; 151  : 
+; 152  : 	__asm {
+; 153  : 		loop_minutos:
+; 154  : 			mov ecx, 0
 
   0002f	b9 00 00 00 00	 mov	 ecx, 0
 
-; 147  : 			mov segundos, 0
+; 155  : 			mov segundos, 0
 
   00034	c7 45 e8 00 00
 	00 00		 mov	 DWORD PTR _segundos$[ebp], 0
 $loop_segundos$4:
 
-; 148  : 			loop_segundos:
-; 149  : 				add segundos, 1
+; 156  : 			loop_segundos:
+; 157  : 				add segundos, 1
 
   0003b	83 45 e8 01	 add	 DWORD PTR _segundos$[ebp], 1
 
-; 150  : 				inc ecx
+; 158  : 				inc ecx
 
   0003f	41		 inc	 ecx
 
-; 151  : 				cmp ecx,59
+; 159  : 				cmp ecx,59
 
   00040	83 f9 3b	 cmp	 ecx, 59			; 0000003bH
 
-; 152  : 				jl loop_segundos
+; 160  : 				jl loop_segundos
 
   00043	7c f6		 jl	 SHORT $loop_segundos$4
 
-; 153  : 			add minutos, 1
+; 161  : 			add minutos, 1
 
   00045	83 45 f4 01	 add	 DWORD PTR _minutos$[ebp], 1
 
-; 154  : 			cmp minutos, 59
+; 162  : 			cmp minutos, 59
 
   00049	83 7d f4 3b	 cmp	 DWORD PTR _minutos$[ebp], 59 ; 0000003bH
 
-; 155  : 			jl loop_minutos
+; 163  : 			jl loop_minutos
 
   0004d	7c e0		 jl	 SHORT $loop_minutos$3
 
-; 156  : 	}
-; 157  : 	Relogio();
+; 164  : 	}
+; 165  : 	Relogio();
 
   0004f	e8 00 00 00 00	 call	 ?Relogio@@YAXXZ		; Relogio
 
-; 158  : }
+; 166  : }
 
   00054	5f		 pop	 edi
   00055	5e		 pop	 esi
@@ -2259,7 +2816,7 @@ _str_format$ = -20					; size = 11
 __$ArrayPad$ = -4					; size = 4
 ?Exemplo5@@YAXXZ PROC					; Exemplo5, COMDAT
 
-; 117  : void Exemplo5(void) {
+; 125  : void Exemplo5(void) {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -2277,8 +2834,8 @@ __$ArrayPad$ = -4					; size = 4
   00023	33 c5		 xor	 eax, ebp
   00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
 
-; 118  : 
-; 119  : 	char str_format[] = "Valor = %i";
+; 126  : 
+; 127  : 	char str_format[] = "Valor = %i";
 
   00028	a1 00 00 00 00	 mov	 eax, DWORD PTR ??_C@_0L@IGKLLFEF@Valor?5?$DN?5?$CFi@
   0002d	89 45 ec	 mov	 DWORD PTR _str_format$[ebp], eax
@@ -2291,45 +2848,45 @@ __$ArrayPad$ = -4					; size = 4
   00044	a0 0a 00 00 00	 mov	 al, BYTE PTR ??_C@_0L@IGKLLFEF@Valor?5?$DN?5?$CFi@+10
   00049	88 45 f6	 mov	 BYTE PTR _str_format$[ebp+10], al
 
-; 120  : 	int valor = 10;
+; 128  : 	int valor = 10;
 
   0004c	c7 45 e0 0a 00
 	00 00		 mov	 DWORD PTR _valor$[ebp], 10 ; 0000000aH
 
-; 121  : 
-; 122  : 	//chamada de função
-; 123  : 	__asm {
-; 124  : 
-; 125  : 		//printf para string de exemplo tem dois parâmetros
-; 126  : 		//print("Valor = %i", valor);
-; 127  : 
-; 128  : 		//1° passo: Informar os valor da direita para esquerda na chamada da função usando a instrução PUSH
-; 129  : 		push[valor]
+; 129  : 
+; 130  : 	//chamada de função
+; 131  : 	__asm {
+; 132  : 
+; 133  : 		//printf para string de exemplo tem dois parâmetros
+; 134  : 		//print("Valor = %i", valor);
+; 135  : 
+; 136  : 		//1° passo: Informar os valor da direita para esquerda na chamada da função usando a instrução PUSH
+; 137  : 		push[valor]
 
   00053	ff 75 e0	 push	 DWORD PTR _valor$[ebp]
 
-; 130  : 		lea eax, str_format //endereço da string
+; 138  : 		lea eax, str_format //endereço da string
 
   00056	8d 45 ec	 lea	 eax, DWORD PTR _str_format$[ebp]
 
-; 131  : 		push eax
+; 139  : 		push eax
 
   00059	50		 push	 eax
 
-; 132  : 
-; 133  : 		//2° passo: chamar a função com a instrução CALL
-; 134  : 		call Exemplo1
+; 140  : 
+; 141  : 		//2° passo: chamar a função com a instrução CALL
+; 142  : 		call Exemplo1
 
   0005a	e8 00 00 00 00	 call	 ?Exemplo1@@YAXXZ	; Exemplo1
 
-; 135  : 
-; 136  : 		//3° passo: retornar o valor esp -> Para cada push some 4
-; 137  : 		add esp, 8
+; 143  : 
+; 144  : 		//3° passo: retornar o valor esp -> Para cada push some 4
+; 145  : 		add esp, 8
 
   0005f	83 c4 08	 add	 esp, 8
 
-; 138  : 	}
-; 139  : }
+; 146  : 	}
+; 147  : }
 
   00062	52		 push	 edx
   00063	8b cd		 mov	 ecx, ebp
@@ -2380,7 +2937,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 ?Exemplo4@@YAXXZ PROC					; Exemplo4, COMDAT
 
-; 101  : {
+; 109  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -2395,40 +2952,40 @@ _TEXT	SEGMENT
   00017	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
   0001c	f3 ab		 rep stosd
 
-; 102  : 	__asm {
-; 103  : 		mov ecx, 0 //contador = 0
+; 110  : 	__asm {
+; 111  : 		mov ecx, 0 //contador = 0
 
   0001e	b9 00 00 00 00	 mov	 ecx, 0
 
-; 104  : 		mov eax, 0
+; 112  : 		mov eax, 0
 
   00023	b8 00 00 00 00	 mov	 eax, 0
 $loop_while$3:
 
-; 105  : 		//enquando contador < 5
-; 106  : 		loop_while:
-; 107  : 		//procedimento executado
-; 108  : 		add eax, 5
+; 113  : 		//enquando contador < 5
+; 114  : 		loop_while:
+; 115  : 		//procedimento executado
+; 116  : 		add eax, 5
 
   00028	83 c0 05	 add	 eax, 5
 
-; 109  : 
-; 110  : 			//controle de execução do laço
-; 111  : 			inc ecx
+; 117  : 
+; 118  : 			//controle de execução do laço
+; 119  : 			inc ecx
 
   0002b	41		 inc	 ecx
 
-; 112  : 			cmp ecx, 5
+; 120  : 			cmp ecx, 5
 
   0002c	83 f9 05	 cmp	 ecx, 5
 
-; 113  : 			jl loop_while
+; 121  : 			jl loop_while
 
   0002f	7c f7		 jl	 SHORT $loop_while$3
 
-; 114  : 
-; 115  : 	}
-; 116  : }
+; 122  : 
+; 123  : 	}
+; 124  : }
 
   00031	5f		 pop	 edi
   00032	5e		 pop	 esi
@@ -2450,7 +3007,7 @@ _vetor$ = -28						; size = 20
 __$ArrayPad$ = -4					; size = 4
 ?Exemplo3@@YAXXZ PROC					; Exemplo3, COMDAT
 
-; 80   : {
+; 88   : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -2468,7 +3025,7 @@ __$ArrayPad$ = -4					; size = 4
   00023	33 c5		 xor	 eax, ebp
   00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
 
-; 81   : 	int vetor[] = { 10,20,30,40,50 };
+; 89   : 	int vetor[] = { 10,20,30,40,50 };
 
   00028	c7 45 e4 0a 00
 	00 00		 mov	 DWORD PTR _vetor$[ebp], 10 ; 0000000aH
@@ -2481,60 +3038,60 @@ __$ArrayPad$ = -4					; size = 4
   00044	c7 45 f4 32 00
 	00 00		 mov	 DWORD PTR _vetor$[ebp+16], 50 ; 00000032H
 
-; 82   : 
-; 83   : 	__asm {
-; 84   : 		mov eax, [vetor + 0]
+; 90   : 
+; 91   : 	__asm {
+; 92   : 		mov eax, [vetor + 0]
 
   0004b	8b 45 e4	 mov	 eax, DWORD PTR _vetor$[ebp]
 
-; 85   : 		mov eax, [vetor + 4]
+; 93   : 		mov eax, [vetor + 4]
 
   0004e	8b 45 e8	 mov	 eax, DWORD PTR _vetor$[ebp+4]
 
-; 86   : 		mov eax, [vetor + 8]
+; 94   : 		mov eax, [vetor + 8]
 
   00051	8b 45 ec	 mov	 eax, DWORD PTR _vetor$[ebp+8]
 
-; 87   : 		mov eax, [vetor + 12]
+; 95   : 		mov eax, [vetor + 12]
 
   00054	8b 45 f0	 mov	 eax, DWORD PTR _vetor$[ebp+12]
 
-; 88   : 		mov eax, [vetor + 16]
+; 96   : 		mov eax, [vetor + 16]
 
   00057	8b 45 f4	 mov	 eax, DWORD PTR _vetor$[ebp+16]
 
-; 89   : 
-; 90   : 		mov esi, 0 //índice = 0
+; 97   : 
+; 98   : 		mov esi, 0 //índice = 0
 
   0005a	be 00 00 00 00	 mov	 esi, 0
 
-; 91   : 		mov eax, [vetor + esi * 4]
+; 99   : 		mov eax, [vetor + esi * 4]
 
   0005f	8b 84 b5 e4 ff
 	ff ff		 mov	 eax, DWORD PTR _vetor$[ebp+esi*4]
 
-; 92   : 
-; 93   : 		inc esi  //índice = 1
+; 100  : 
+; 101  : 		inc esi  //índice = 1
 
   00066	46		 inc	 esi
 
-; 94   : 		mov eax, [vetor + esi * 4]
+; 102  : 		mov eax, [vetor + esi * 4]
 
   00067	8b 84 b5 e4 ff
 	ff ff		 mov	 eax, DWORD PTR _vetor$[ebp+esi*4]
 
-; 95   : 
-; 96   : 		inc esi  //índice = 2
+; 103  : 
+; 104  : 		inc esi  //índice = 2
 
   0006e	46		 inc	 esi
 
-; 97   : 		mov eax, [vetor + esi * 4]
+; 105  : 		mov eax, [vetor + esi * 4]
 
   0006f	8b 84 b5 e4 ff
 	ff ff		 mov	 eax, DWORD PTR _vetor$[ebp+esi*4]
 
-; 98   : 	}
-; 99   : }
+; 106  : 	}
+; 107  : }
 
   00076	52		 push	 edx
   00077	8b cd		 mov	 ecx, ebp
@@ -2584,7 +3141,7 @@ _A$ = -12						; size = 4
 __$ArrayPad$ = -4					; size = 4
 ?Exemplo2@@YAXXZ PROC					; Exemplo2, COMDAT
 
-; 52   : {
+; 60   : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -2602,79 +3159,79 @@ __$ArrayPad$ = -4					; size = 4
   00023	33 c5		 xor	 eax, ebp
   00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
 
-; 53   : 	int A = 26;
+; 61   : 	int A = 26;
 
   00028	c7 45 f4 1a 00
 	00 00		 mov	 DWORD PTR _A$[ebp], 26	; 0000001aH
 
-; 54   : 	int B = 5;
+; 62   : 	int B = 5;
 
   0002f	c7 45 e8 05 00
 	00 00		 mov	 DWORD PTR _B$[ebp], 5
 
-; 55   : 	int R;
-; 56   : 
-; 57   : 	//Operações Aritméticas
-; 58   : 	__asm {
-; 59   : 		mov eax, [A] //EAX=A
+; 63   : 	int R;
+; 64   : 
+; 65   : 	//Operações Aritméticas
+; 66   : 	__asm {
+; 67   : 		mov eax, [A] //EAX=A
 
   00036	8b 45 f4	 mov	 eax, DWORD PTR _A$[ebp]
 
-; 60   : 		add eax, [B] //EAX=A+B
+; 68   : 		add eax, [B] //EAX=A+B
 
   00039	03 45 e8	 add	 eax, DWORD PTR _B$[ebp]
 
-; 61   : 		mov[R], eax  //R=EAX
+; 69   : 		mov[R], eax  //R=EAX
 
   0003c	89 45 dc	 mov	 DWORD PTR _R$[ebp], eax
 
-; 62   : 
-; 63   : 		mov eax, [A] //EAX=A
+; 70   : 
+; 71   : 		mov eax, [A] //EAX=A
 
   0003f	8b 45 f4	 mov	 eax, DWORD PTR _A$[ebp]
 
-; 64   : 		sub eax, [B] //EAX=A-B
+; 72   : 		sub eax, [B] //EAX=A-B
 
   00042	2b 45 e8	 sub	 eax, DWORD PTR _B$[ebp]
 
-; 65   : 		mov[R], eax  //R=EAX
+; 73   : 		mov[R], eax  //R=EAX
 
   00045	89 45 dc	 mov	 DWORD PTR _R$[ebp], eax
 
-; 66   : 
-; 67   : 		//Multiplicação de EAX por um registrador ou variável
-; 68   : 		mov eax, [A] //EAX=A
+; 74   : 
+; 75   : 		//Multiplicação de EAX por um registrador ou variável
+; 76   : 		mov eax, [A] //EAX=A
 
   00048	8b 45 f4	 mov	 eax, DWORD PTR _A$[ebp]
 
-; 69   : 		mul[B] //EAX=A+B
+; 77   : 		mul[B] //EAX=A+B
 
   0004b	f7 65 e8	 mul	 DWORD PTR _B$[ebp]
 
-; 70   : 		mov[R], eax  //R=EAX
+; 78   : 		mov[R], eax  //R=EAX
 
   0004e	89 45 dc	 mov	 DWORD PTR _R$[ebp], eax
 
-; 71   : 
-; 72   : 		//Divide EDX:EAX por um registrador ou variável
-; 73   : 		mov edx, 0
+; 79   : 
+; 80   : 		//Divide EDX:EAX por um registrador ou variável
+; 81   : 		mov edx, 0
 
   00051	ba 00 00 00 00	 mov	 edx, 0
 
-; 74   : 		mov eax, [A] //EAX=A
+; 82   : 		mov eax, [A] //EAX=A
 
   00056	8b 45 f4	 mov	 eax, DWORD PTR _A$[ebp]
 
-; 75   : 		idiv[B] //EAX =A/B
+; 83   : 		idiv[B] //EAX =A/B
 
   00059	f7 7d e8	 idiv	 DWORD PTR _B$[ebp]
 
-; 76   : 		mov[R], EAX //resultado está em EAX e o resto em EDX
+; 84   : 		mov[R], EAX //resultado está em EAX e o resto em EDX
 
   0005c	89 45 dc	 mov	 DWORD PTR _R$[ebp], eax
 
-; 77   : 	}
-; 78   : }
+; 85   : 	}
+; 86   : }
 
   0005f	5f		 pop	 edi
   00060	5e		 pop	 esi
@@ -2699,7 +3256,7 @@ _var1$ = -12						; size = 4
 __$ArrayPad$ = -4					; size = 4
 ?Exemplo1@@YAXXZ PROC					; Exemplo1, COMDAT
 
-; 37   : {
+; 45   : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
@@ -2717,36 +3274,36 @@ __$ArrayPad$ = -4					; size = 4
   00023	33 c5		 xor	 eax, ebp
   00025	89 45 fc	 mov	 DWORD PTR __$ArrayPad$[ebp], eax
 
-; 38   : 	int var1 = 10;
+; 46   : 	int var1 = 10;
 
   00028	c7 45 f4 0a 00
 	00 00		 mov	 DWORD PTR _var1$[ebp], 10 ; 0000000aH
 
-; 39   : 
-; 40   : 	//Movimentação de dados
-; 41   : 	__asm {
-; 42   : 		//para registradores
-; 43   : 		mov eax, 2 //EAX=2
+; 47   : 
+; 48   : 	//Movimentação de dados
+; 49   : 	__asm {
+; 50   : 		//para registradores
+; 51   : 		mov eax, 2 //EAX=2
 
   0002f	b8 02 00 00 00	 mov	 eax, 2
 
-; 44   : 		mov eax, [var1] //EAX=var1
+; 52   : 		mov eax, [var1] //EAX=var1
 
   00034	8b 45 f4	 mov	 eax, DWORD PTR _var1$[ebp]
 
-; 45   : 
-; 46   : 		//para endereços de memória
-; 47   : 		mov[var1], 2 //var1=2
+; 53   : 
+; 54   : 		//para endereços de memória
+; 55   : 		mov[var1], 2 //var1=2
 
   00037	c7 45 f4 02 00
 	00 00		 mov	 DWORD PTR _var1$[ebp], 2
 
-; 48   : 		mov[var1], eax //var1=EAX
+; 56   : 		mov[var1], eax //var1=EAX
 
   0003e	89 45 f4	 mov	 DWORD PTR _var1$[ebp], eax
 
-; 49   : 	}
-; 50   : }
+; 57   : 	}
+; 58   : }
 
   00041	5f		 pop	 edi
   00042	5e		 pop	 esi

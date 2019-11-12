@@ -16,6 +16,9 @@ void Maior(void);
 void Exercicio1(void);
 void Exercicio2(void);
 void Exercicio3(void);
+void Exercicio4(void);
+void Exercicio5(void);
+void Exercicio6(void);
 
 int main()
 {
@@ -30,9 +33,12 @@ int main()
 	//Delta();
 	//Facens();
 	//Maior();
-	//Exercicio1();
-	//Exercicio2();
+	Exercicio1();
+	Exercicio2();
 	Exercicio3();
+	Exercicio4();
+	Exercicio5();
+	Exercicio6();
 }
 
 void Exemplo1(void)
@@ -286,3 +292,89 @@ void Exercicio3(void) {
 	}
 }
 // ordem crescente ----- INCOMPLETO
+void Exercicio4(void) {
+	int lista[] = { 5, 10, 15, 20, 25 };
+	int soma = 0, result, cinco = 5;
+
+	__asm {
+		mov ecx, 0
+		START:
+			mov eax, DWORD PTR[lista + ecx*4]
+			add eax, [soma]
+			mov [soma], eax
+			inc ecx
+			cmp ecx, 5
+			jl START
+			mov edx, 0
+			mov eax, [soma]
+			idiv ecx
+			mov result, eax
+	}
+}
+// media
+void Exercicio5(void) {
+	int lista[] = { 5, 30, 15, 20, 25 };
+	int maior;
+	int cont = 0;
+
+	__asm {
+		mov ecx, 0
+		mov eax, DWORD PTR[lista + ecx*4]
+		mov[maior], eax
+		inc ecx
+
+		INICIO :
+			mov eax, [maior]
+			cmp eax, DWORD PTR[lista + ecx*4]
+			jl MAIORTRUE
+			jg MAIORFALSE
+
+		MAIORTRUE :
+			mov eax, DWORD PTR[lista + ecx*4]
+			mov[maior], eax
+		MAIORFALSE :
+			inc ecx
+			inc cont
+			cmp cont, 5
+			jl INICIO
+			jmp FIM
+
+		FIM :
+
+	}
+}
+// maior valor
+void Exercicio6(void) {
+	//só funcionará para valores maiores ou iguais a 2
+	int valor = 83;
+	int incremento = 2;
+	int isPrime = 0;
+
+	__asm {
+		mov edx, 0
+		mov eax, [valor]
+		idiv [incremento]
+		inc	[incremento]
+		cmp edx, 0
+		je FIMFALSE
+		START :
+			mov eax, valor
+			cmp [incremento], eax
+			jge FIMTRUE
+			mov edx, 0
+			mov eax, [valor]
+			idiv[incremento]
+			cmp edx, 0
+			je FIMFALSE
+			add [incremento], 2
+			jmp START
+
+		FIMTRUE:	
+			mov [isPrime], 1
+			jmp FIM
+		FIMFALSE:
+			mov [isPrime], 0
+		FIM:
+	}
+}
+// primos

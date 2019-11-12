@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Exemplos_x86"
   ],
-  "SelectedNode": "\\Exemplos_x86.sln",
+  "SelectedNode": "\\Exemplos_x86\\Exemplos_x86.cpp",
   "PreviewInSolutionExplorer": false
 }

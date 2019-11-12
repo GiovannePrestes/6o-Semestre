@@ -1,0 +1,13 @@
+﻿  pch.cpp
+  Exemplos_x86.cpp
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(45): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(47): error C2065: 'mov': undeclared identifier
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(47): error C2146: syntax error: missing ';' before identifier 'eax'
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(47): error C2065: 'eax': undeclared identifier
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(48): error C2146: syntax error: missing ';' before identifier 'mov'
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(48): error C2065: 'mov': undeclared identifier
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(48): error C2146: syntax error: missing ';' before identifier 'eax'
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(48): error C2065: 'eax': undeclared identifier
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(51): error C3260: 'identifier': skipping unexpected token(s) before lambda body
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(62): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+d:\facul\6o semestre\arquitetura de computadores\lab\exemplos_x86\exemplos_x86\exemplos_x86.cpp(311): fatal error C1004: unexpected end-of-file found
